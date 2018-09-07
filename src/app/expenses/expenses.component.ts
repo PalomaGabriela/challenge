@@ -12,11 +12,19 @@ export class ExpensesComponent implements OnInit {
     form: FormGroup;
     constructor(fb: FormBuilder) {
         this.form = fb.group({
-            options: 1
+            options: "all"
         });
     }
 
+  
     ngOnInit() {
       
+        this.form.valueChanges.subscribe(
+            item => {
+                console.log(item.options);
+            }
+        )
     }
+
+
 }
