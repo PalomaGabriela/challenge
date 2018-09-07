@@ -1,0 +1,12 @@
+.toolbar-no-background {
+    background: none;
+}
+
+.title {
+    color: rgb(255,64,129);
+}
+
+.mat-radio-button {
+    padding-right: 16px;
+    font-size: 14px;
+}
