@@ -1,4 +1,4 @@
-<mat-toolbar class="toolbar-no-background" fxFlex>
+<mat-toolbar class="toolbar-no-background">
     <mat-toolbar-row fxLayout="row">
         <h1 class="title">Despesas orçamentarias</h1>
     </mat-toolbar-row>
@@ -13,6 +13,20 @@
     </mat-toolbar-row>
 </mat-toolbar>
 
-<div>
-<!--lista de itens-->
+<div fxLayout="row">
+    <mat-accordion fxFlex>
+        <mat-expansion-panel *ngFor="let folder of folders">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <mat-icon mat-list-icon>folder</mat-icon>
+                    <span>{{folder.name}}</span>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-list fxFlex>
+                <mat-list-item>
+                    <h4 mat-line>teste</h4>
+                </mat-list-item>
+            </mat-list>
+        </mat-expansion-panel>
+    </mat-accordion>
 </div>

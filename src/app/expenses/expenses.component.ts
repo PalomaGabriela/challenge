@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { Expanse } from './expenses';
 
 @Component({
     selector: 'challenge-expenses',
@@ -9,22 +10,34 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 
 export class ExpensesComponent implements OnInit {
 
-    form: FormGroup;
-    constructor(fb: FormBuilder) {
-        this.form = fb.group({
-            options: "all"
-        });
-    }
+    folders: Expanse[] = [
+        {
+            name: 'Despesas mensais'
+        },
+        {
+            name: 'Despesas'
+        },
+        {
+            name: 'Despesas',
+        }
+    ];
+    
+form: FormGroup;
+constructor(fb: FormBuilder) {
+    this.form = fb.group({
+        options: "all"
+    });
+}
 
-  
-    ngOnInit() {
-      
-        this.form.valueChanges.subscribe(
-            item => {
-                console.log(item.options);
-            }
-        )
-    }
+
+ngOnInit() {
+
+    this.form.valueChanges.subscribe(
+        item => {
+            console.log(item.options);
+        }
+    )
+}
 
 
 }
