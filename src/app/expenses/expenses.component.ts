@@ -39,5 +39,8 @@ ngOnInit() {
     )
 }
 
+edit(event: Event) {
+    event.stopPropagation();
+}
 
 }

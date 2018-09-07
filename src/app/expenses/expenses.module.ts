@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { ExpensesComponent } from './expenses.component';
-import { MatExpansionModule, MatIconModule, MatListModule, MatRadioModule, MatToolbarModule } from '@angular/material';
+import { 
+    MatButtonModule, MatExpansionModule, MatIconModule, MatListModule, MatRadioModule, MatToolbarModule 
+} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -9,6 +11,7 @@ import { CommonModule } from '@angular/common';
     imports: [
         CommonModule,
         FlexLayoutModule,
+        MatButtonModule,
         MatExpansionModule,
         MatIconModule,
         MatListModule,
