@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nav-bar',
+  selector: 'challenge-nav-bar',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
