@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
     selector: 'challenge-expenses',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ExpensesComponent implements OnInit {
-    constructor() { }
 
-    ngOnInit() { }
+    form: FormGroup;
+    constructor(fb: FormBuilder) {
+        this.form = fb.group({
+            options: 1
+        });
+    }
+
+    ngOnInit() {
+      
+    }
 }

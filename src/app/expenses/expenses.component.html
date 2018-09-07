@@ -3,9 +3,9 @@
         <h1 class="title">Despesas orçamentarias</h1>
     </mat-toolbar-row>
 
-    <mat-toolbar-row fxLayout="row">
-        <mat-radio-group fxFlex>
-            <mat-radio-button value="1">Tudo</mat-radio-button>
+    <mat-toolbar-row fxLayout="row" [formGroup]="form">
+        <mat-radio-group fxFlex formControlName="options">
+            <mat-radio-button checked="true" value="1">Tudo</mat-radio-button>
             <mat-radio-button value="2">Mês</mat-radio-button>
             <mat-radio-button value="3">Categoria</mat-radio-button>
             <mat-radio-button value="4">Fonte</mat-radio-button>
