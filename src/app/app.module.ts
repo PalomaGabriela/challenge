@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavModule } from './nav/nav.module';
+import { ExpenseswModule } from './expenses/index';
+import { NavModule } from './nav/index';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { NavModule } from './nav/nav.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ExpenseswModule,
     NavModule
   ],
   providers: [],
