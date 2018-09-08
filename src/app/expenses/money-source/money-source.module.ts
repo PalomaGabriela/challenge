@@ -5,10 +5,12 @@ import {
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
+import { EditMoneySourceDialogModule } from './edit-money-source-dialog/index'
 
 @NgModule({
     imports: [
         CommonModule,
+        EditMoneySourceDialogModule,
         FlexLayoutModule,
         MatButtonModule, 
         MatExpansionModule, 

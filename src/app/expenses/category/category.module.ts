@@ -5,10 +5,12 @@ import {
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
+import { EditCategoryDialogModule } from './edit-category-dialog/index';
 
 @NgModule({
     imports: [
         CommonModule,
+        EditCategoryDialogModule,
         FlexLayoutModule,
         MatButtonModule, 
         MatExpansionModule, 

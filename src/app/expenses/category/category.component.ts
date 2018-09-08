@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { EditCategoryDialogComponent } from './edit-category-dialog/index';
+import { MatDialog } from '@angular/material';
 
 @Component({
     selector: 'challenge-categories',
@@ -16,11 +18,14 @@ export class CategoryComponent implements OnInit {
 
     get categories(): any[] { return this.list; }
 
-    constructor() { }
+    constructor(public dialog: MatDialog) { }
 
     ngOnInit() { }
 
-    edit(event: Event) {
+    openEdit(event: Event, category: any) {
         event.stopPropagation();
+        this.dialog.open(EditCategoryDialogComponent, { data: category })
+            .afterClosed()
+            .subscribe(result => result);
     }
 }
