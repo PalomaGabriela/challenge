@@ -66,8 +66,4 @@ export class ExpensesComponent implements OnInit {
             });
     }
 
-    edit(event: Event) {
-        event.stopPropagation();
-    }
-
 }
