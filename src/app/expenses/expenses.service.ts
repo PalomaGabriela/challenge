@@ -11,7 +11,7 @@ export class ExpensesService {
   constructor(private _http: HttpClient) { }
 
   list(): Observable<Expense[]> {
-    return this._http.get<Expense[]>('./assets/database.json');
+    return this._http.get<Expense[]>('./assets/db.json');
   }
 
 }

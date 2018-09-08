@@ -15,6 +15,7 @@ export class ExpensesComponent implements OnInit {
     months = [];
     categories = [];
     sources = [];
+    teste = [];
     form: FormGroup;
     constructor(
         fb: FormBuilder,
@@ -29,38 +30,12 @@ export class ExpensesComponent implements OnInit {
     ngOnInit() {
 
         this.form.valueChanges.subscribe(
-            item => {
-                console.log(item.options);
-            }
+            item => {console.log(item.options);}
         );
 
         this.expenseService.list()
             .subscribe(res => {
-                this.expenses = res
-
-                this.expenses.map(itens => {
-                    this.months.push(
-                        {
-                            "mes": itens['mes_movimentacao'], "valor_empenhado": itens['valor_empenhado'],
-                            "valor_pago": itens['valor_pago'], "valor_liquidado": itens['valor_liquidado']
-                        }
-                    );
-
-                    this.categories.push(
-                        {
-                            "categoria": itens['categoria_economica_nome'], "valor_empenhado": itens['valor_empenhado'],
-                            "valor_pago": itens['valor_pago'], "valor_liquidado": itens['valor_liquidado']
-                        }
-                    );
-
-                    this.sources.push(
-                        {
-                            "fonte_recurso": itens['fonte_recurso_nome'], "unidade_nome": itens['unidade_nome'],
-                            "orgao_nome": itens['orgao_nome'], "funcao_nome": itens['funcao_nome']
-                        }
-                    )
-                });
-
+                this.expenses = res['result']['records'];
             });
     }
 
