@@ -1,13 +1,24 @@
 <div class="mat-dialog">
     <h2 mat-dialog-title>Editar informações de {{data.mes}}</h2>
     <mat-divider></mat-divider>
-    <mat-dialog-content>
 
+    <mat-dialog-content>
+        <form #form="ngForm" class="form" fxLayout="column">
+            <mat-form-field>
+                <input matInput placeholder="Valor empenhado" [(ngModel)]="month.valor_empenhado" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Valor liquidado" [(ngModel)]="month.valor_liquidado" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Valor pago" [(ngModel)]="month.valor_pago" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+        </form>
 
     </mat-dialog-content>
 
     <mat-dialog-actions fxLayout="row" fxLayoutAlign="end end">
         <button class="mat-raised-button" (click)="close()">Fechar</button>
-        <button class="mat-raised-button mat-primary">Salvar</button>
+        <button class="mat-raised-button mat-primary" (click)="save()">Salvar</button>
     </mat-dialog-actions>
 </div>

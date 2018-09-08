@@ -16,6 +16,10 @@ export class EditMonthDialogComponent implements OnInit {
 
     ngOnInit() { }
 
+    save() {
+        this.dialogRef.close(this.month);
+    }
+
     close() {
         this.dialogRef.close();
     }

@@ -26,6 +26,6 @@ export class MonthComponent implements OnInit {
         event.stopPropagation();
         this.dialog.open(EditMonthDialogComponent, {data: month})
             .afterClosed()
-            .subscribe(result => console.log('fechou'));
+            .subscribe(result => console.log(result));
     }
 }
