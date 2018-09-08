@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Expense } from './expenses';
 import { ExpensesService } from './expenses.service';
-import { map } from 'rxjs/operators';
-import { Month } from './month';
 
 @Component({
     selector: 'challenge-expenses',
