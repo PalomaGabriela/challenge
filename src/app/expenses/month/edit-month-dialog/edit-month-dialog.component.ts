@@ -11,13 +11,14 @@ export class EditMonthDialogComponent implements OnInit {
     month: any;
     constructor(public dialogRef: MatDialogRef<EditMonthDialogComponent>,
         @Inject(MAT_DIALOG_DATA) public data: any) { 
-            this.month = data;
+            this.month = Object.assign({}, data);
         }
 
     ngOnInit() { }
 
     save() {
-        this.dialogRef.close(this.month);
+        this.data = this.month;
+        this.dialogRef.close(this.data);
     }
 
     close() {
