@@ -1,0 +1,124 @@
+{
+    "result": {
+        "records": {
+            "months": [
+                {
+                    "month": "1",
+                    "valores": [
+                        {
+                            "valor_pago": "239827,95"
+                        },
+                        {
+                            "valor_pago": "31300,54"
+                        },
+                        {
+                            "valor_pago": "1132,52"
+                        },
+                        {
+                            "valor_pago": "14997,61"
+                        }
+                    ]
+                },
+                {
+                    "month": "2",
+                    "valores": [
+                        {
+                            "valor_pago": "101912,17"
+                        },
+                        {
+                            "valor_pago": "196424,32"
+                        },
+                        {
+                            "valor_pago": "8750,00"
+                        },
+                        {
+                            "valor_pago": "17350,77"
+                        },
+                        {
+                            "valor_pago": "2972,55"
+                        },
+                        {
+                            "valor_pago":"876,19"
+                        },
+                        {
+                            "valor_pago":"1359,15"
+                        },
+                        {
+                            "valor_pago":"4724,04"
+                        }
+                    ]
+                }
+            ],
+            "categories": [
+                {
+                    "category": "DESPESAS CORRENTES",
+                    "valores": [
+                        {
+                            "valor_pago":"5302,49"
+                        },
+                        {
+                            "valor_pago": "159933,78"
+                        },
+                        {
+                            "valor_pago": "77521,68"
+                        },
+                        {
+                            "valor_pago": "86559,28"
+                        },
+                        {
+                            "valor_pago": "2855,30"
+                        }
+                    ]
+                }
+            ],
+            "sources": [
+                {
+                    "fonte_recurso": "EDUCA\u00c7\u00c3O - COMPL. LIMITE CONSTITUCIONAL",
+                    "valores": [
+                        {
+                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA"
+                        },
+                        {
+                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA"
+                        },
+                        {
+                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA"
+                        },
+                        {
+                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA"
+                        },
+                        {
+                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA"
+                        }
+                    ]
+                },
+                {
+                    "fonte_recurso": "RECURSOS ORDIN\u00c1RIOS - N\u00c3O VINCULADOS",
+                    "valores": [
+                        {
+                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA"
+                        },
+                        {
+                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA"
+                        },
+                        {
+                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA"
+                        },
+                        {
+                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA"
+                        },
+                        {
+                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA"
+                        },
+                        {
+                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA"
+                        },
+                        {
+                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
