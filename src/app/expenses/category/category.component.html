@@ -3,16 +3,16 @@
         <mat-expansion-panel-header>
             <mat-panel-title>
                 <mat-icon class="color-pink" mat-list-icon>description</mat-icon>
-                <span>{{categoria.categoria}}</span>
+                <span>{{categoria.category}}</span>
             </mat-panel-title>
             <button mat-icon-button class="color-pink" (click)="edit($event)">
                 <mat-icon aria-label="Example icon-button with a heart icon">create</mat-icon>
             </button>
         </mat-expansion-panel-header>
-        <mat-list fxFlex>
+        <mat-list *ngFor="let item of categoria.valores">
             <mat-list-item>
-                <h4 mat-line>Valores</h4>
-                <p mat-line>Empenhado {{categoria.valor_empenhado}}, Liquidado {{categoria.valor_liquidado}}, Pago {{categoria.valor_pago}}</p>
+                <h4 mat-line>Valor</h4>
+                <p mat-line>Pago {{item.valor_pago}}</p>
             </mat-list-item>
         </mat-list>
     </mat-expansion-panel>
