@@ -14,22 +14,8 @@
 </mat-toolbar>
 
 <div fxLayout="row">
-    <mat-accordion fxFlex>
-        <mat-expansion-panel *ngFor="let folder of folders">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    <mat-icon class="color-pink" mat-list-icon>description</mat-icon>
-                    <span>{{folder.name}}</span>
-                </mat-panel-title>
-                <button mat-icon-button class="color-pink" (click)="edit($event)">
-                    <mat-icon aria-label="Example icon-button with a heart icon">create</mat-icon>
-                </button>
-            </mat-expansion-panel-header>
-            <mat-list fxFlex>
-                <mat-list-item>
-                    <h4 mat-line>teste</h4>
-                </mat-list-item>
-            </mat-list>
-        </mat-expansion-panel>
-    </mat-accordion>
+    <div fxFlex>
+        <challenge-month [months]="months"></challenge-month>
+        <challenge-categories [categories]="categories"></challenge-categories>
+    </div>
 </div>

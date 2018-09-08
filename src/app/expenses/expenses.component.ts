@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { Expanse } from './expenses';
+import { Expense } from './expenses';
+import { ExpensesService } from './expenses.service';
+import { map } from 'rxjs/operators';
+import { Month } from './month';
 
 @Component({
     selector: 'challenge-expenses',
@@ -10,37 +13,54 @@ import { Expanse } from './expenses';
 
 export class ExpensesComponent implements OnInit {
 
-    folders: Expanse[] = [
-        {
-            name: 'Despesas mensais'
-        },
-        {
-            name: 'Despesas'
-        },
-        {
-            name: 'Despesas',
-        }
-    ];
-    
-form: FormGroup;
-constructor(fb: FormBuilder) {
-    this.form = fb.group({
-        options: "all"
-    });
-}
+    expenses: Expense[] = [];
+    months = [];
+    categories = [];
+    form: FormGroup;
+    constructor(
+        fb: FormBuilder,
+        private readonly expenseService: ExpensesService
+    ) {
+        this.form = fb.group({
+            options: "all"
+        });
+    }
 
 
-ngOnInit() {
+    ngOnInit() {
 
-    this.form.valueChanges.subscribe(
-        item => {
-            console.log(item.options);
-        }
-    )
-}
+        this.form.valueChanges.subscribe(
+            item => {
+                console.log(item.options);
+            }
+        );
 
-edit(event: Event) {
-    event.stopPropagation();
-}
+        this.expenseService.list()
+            .subscribe(res => {
+                this.expenses = res
+
+                this.expenses.map(itens => {
+                    this.months.push(
+                        {
+                            "mes": itens['mes_movimentacao'], "valor_empenhado": itens['valor_empenhado'],
+                            "valor_pago": itens['valor_pago'], "valor_liquidado": itens['valor_liquidado']
+                        }
+                    );
+
+                    this.categories.push(
+                        {
+                            "categoria": itens['categoria_economica_nome'], "valor_empenhado": itens['valor_empenhado'],
+                            "valor_pago": itens['valor_pago'], "valor_liquidado": itens['valor_liquidado']
+                        }
+                    )
+                });
+
+                console.log(this.categories);
+            });
+    }
+
+    edit(event: Event) {
+        event.stopPropagation();
+    }
 
 }
