@@ -1,9 +1,9 @@
 <mat-accordion>
-    <mat-expansion-panel *ngFor="let categoria of list">
+    <mat-expansion-panel *ngFor="let source of list">
         <mat-expansion-panel-header>
             <mat-panel-title>
                 <mat-icon class="color-pink" mat-list-icon>description</mat-icon>
-                <span>{{categoria.categoria}}</span>
+                <span>{{source.fonte_recurso}}</span>
             </mat-panel-title>
             <button mat-icon-button class="color-pink" (click)="edit($event)">
                 <mat-icon aria-label="Example icon-button with a heart icon">create</mat-icon>
@@ -11,8 +11,7 @@
         </mat-expansion-panel-header>
         <mat-list fxFlex>
             <mat-list-item>
-                <h4 mat-line>Valores</h4>
-                <p mat-line>Empenhado {{categoria.valor_empenhado}}, Liquidado {{categoria.valor_liquidado}}, Pago {{categoria.valor_pago}}</p>
+                <h4 mat-line>Despesas realizadas pelo {{source.unidade_nome}}</h4>
             </mat-list-item>
         </mat-list>
     </mat-expansion-panel>

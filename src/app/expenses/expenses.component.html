@@ -7,7 +7,7 @@
         <mat-radio-group fxFlex formControlName="options">
             <mat-radio-button value="month">Mês</mat-radio-button>
             <mat-radio-button value="category">Categoria</mat-radio-button>
-            <mat-radio-button value="font">Fonte</mat-radio-button>
+            <mat-radio-button value="source">Fonte</mat-radio-button>
         </mat-radio-group>
     </mat-toolbar-row>
 </mat-toolbar>
@@ -15,5 +15,6 @@
     <div fxFlex [ngSwitch]="form.controls.options.value">
         <challenge-month *ngSwitchCase="'month'" [months]="months"></challenge-month>
         <challenge-categories *ngSwitchCase="'category'" [categories]="categories"></challenge-categories>
+        <challenge-source *ngSwitchCase="'source'" [sources]="sources"></challenge-source>
     </div>
 </div>

@@ -16,6 +16,7 @@ export class ExpensesComponent implements OnInit {
     expenses: Expense[] = [];
     months = [];
     categories = [];
+    sources = [];
     form: FormGroup;
     constructor(
         fb: FormBuilder,
@@ -52,10 +53,16 @@ export class ExpensesComponent implements OnInit {
                             "categoria": itens['categoria_economica_nome'], "valor_empenhado": itens['valor_empenhado'],
                             "valor_pago": itens['valor_pago'], "valor_liquidado": itens['valor_liquidado']
                         }
+                    );
+
+                    this.sources.push(
+                        {
+                            "fonte_recurso": itens['fonte_recurso_nome'], "unidade_nome": itens['unidade_nome'],
+                            "orgao_nome": itens['orgao_nome'], "funcao_nome": itens['funcao_nome']
+                        }
                     )
                 });
 
-                console.log(this.categories);
             });
     }
 
