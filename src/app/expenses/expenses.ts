@@ -1,43 +1,10 @@
+import { Month } from "./month";
+import { Category } from "./category";
+import { Source } from "./source";
+
 export interface Expense {
-    
-    subfuncao_codigo: number,
-    programa_nome: string,
-    grupo_despesa_nome: string,
-    subempenho: number,
-    empenho_modalidade_nome: string,
-    unidade_codigo: number,
-    modalidade_licitacao_nome: string,
-    subelemento_nome: string,
-    empenho_modalidade_codigo: number,
-    programa_codigo: number,
-    credor_codigo: number,
-    empenho_numero: number,
-    valor_liquidado: number,
-    modalidade_aplicacao_nome: string,
-    valor_empenhado: number,
-    ano_movimentacao: number,
-    modalidade_aplicacao_codigo: number,
-    categoria_economica_nome: string,
-    indicador_subempenho: string,
-    unidade_nome: string,
-    acao_codigo: number,
-    fonte_recurso_nome: string,
-    orgao_nome: string,
-    subelemento_codigo: number,
-    elemento_codigo: number,
-    funcao_codigo: number,
-    subfuncao_nome: string,
-    fonte_recurso_codigo: number,
-    acao_nome: string,
-    elemento_nome: string,
-    mes_movimentacao: number,
-    orgao_codigo: number,
-    grupo_despesa_codigo: number,
-    valor_pago: number,
-    funcao_nome: string,
-    modalidade_licitacao_codigo: number,
-    empenho_ano: number,
-    _id: number,
-    categoria_economica_codigo: number,
-    credor_nome: string
+
+    months: Month,
+    categories: Category,
+    sources: Source
 }

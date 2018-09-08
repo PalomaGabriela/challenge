@@ -12,11 +12,8 @@ import { ExpensesService } from './expenses.service';
 export class ExpensesComponent implements OnInit {
 
     expenses: Expense[] = [];
-    months = [];
-    categories = [];
-    sources = [];
-    teste = [];
     form: FormGroup;
+    
     constructor(
         fb: FormBuilder,
         private readonly expenseService: ExpensesService
@@ -39,4 +36,7 @@ export class ExpensesComponent implements OnInit {
             });
     }
 
+    openGraphics() {
+        console.log('open graphics');
+    }
 }

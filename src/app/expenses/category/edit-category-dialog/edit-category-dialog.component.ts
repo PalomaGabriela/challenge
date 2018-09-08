@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { Category } from '../../index';
 
 @Component({
     selector: 'challenge-edit-category-dialog',
@@ -8,17 +9,17 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 
 export class EditCategoryDialogComponent implements OnInit {
-    month: any;
+
+    category: Category;
     constructor(public dialogRef: MatDialogRef<EditCategoryDialogComponent>,
-        @Inject(MAT_DIALOG_DATA) public data: any) { 
-            this.month = Object.assign({}, data);
+        @Inject(MAT_DIALOG_DATA) public data: Category) { 
+            this.category = data;
         }
 
-    ngOnInit() { }
+    ngOnInit() {  }
 
     save() {
-        this.data = this.month;
-        this.dialogRef.close(this.data);
+        this.dialogRef.close(this.category);
     }
 
     close() {

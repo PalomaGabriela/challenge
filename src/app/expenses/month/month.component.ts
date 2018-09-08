@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { EditMonthDialogComponent } from './edit-month-dialog/index';
+import { Month } from '../index';
 
 @Component({
     selector: 'challenge-month',
@@ -12,11 +13,11 @@ export class MonthComponent implements OnInit {
     list = [];
 
     @Input()
-    set months(months: any[]) {
+    set months(months: Month[]) {
         this.list = months;
     }
 
-    get months(): any[] { 
+    get months(): Month[] { 
         return this.list; 
     }
 
@@ -26,7 +27,7 @@ export class MonthComponent implements OnInit {
 
     }
 
-    openEdit(event: Event, month: any) {
+    openEdit(event: Event, month: Month) {
         event.stopPropagation();
         this.dialog.open(EditMonthDialogComponent, {data: month})
             .afterClosed()

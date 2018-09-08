@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { Source } from '../../index';
 
 @Component({
     selector: 'challenge-edit-money-source-dialog',
@@ -8,9 +9,9 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 
 export class EditMoneySourceDialogComponent implements OnInit {
-    month: any;
+    month: Source;
     constructor(public dialogRef: MatDialogRef<EditMoneySourceDialogComponent>,
-        @Inject(MAT_DIALOG_DATA) public data: any) { 
+        @Inject(MAT_DIALOG_DATA) public data: Source) { 
             this.month = Object.assign({}, data);
         }
 

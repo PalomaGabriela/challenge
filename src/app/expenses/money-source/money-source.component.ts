@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { EditMoneySourceDialogComponent } from './edit-money-source-dialog/index';
+import { Source } from '../index';
 
 @Component({
     selector: 'challenge-source',
@@ -12,18 +13,18 @@ export class MoneySourceComponent implements OnInit {
     list = [];
 
     @Input()
-    set sources(sources: any[]) {
+    set sources(sources: Source[]) {
         this.list = sources;
     }
 
-    get sources(): any[] { return this.list; }
+    get sources(): Source[] { return this.list; }
     constructor(public dialog: MatDialog) { }
 
     ngOnInit() {
 
     }
 
-    openEdit(source: any) {
+    openEdit(source: Source) {
         this.dialog.open(EditMoneySourceDialogComponent, { data: source })
             .afterClosed()
             .subscribe(result => result);
