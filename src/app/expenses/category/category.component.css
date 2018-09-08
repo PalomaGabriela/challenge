@@ -1,16 +1,5 @@
-.title {
-    color: rgb(255,64,129);
-    font-size: 16px;
-    font-weight: bold;
-}
-
 .color-pink {
     color: rgb(255,64,129);
-}
-
-.mat-radio-button {
-    padding-right: 16px;
-    font-size: 14px;
 }
 
 mat-panel-title span { 
