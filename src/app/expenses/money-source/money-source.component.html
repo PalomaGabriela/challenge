@@ -9,9 +9,9 @@
                 <mat-icon aria-label="Example icon-button with a heart icon">create</mat-icon>
             </button>
         </mat-expansion-panel-header>
-        <mat-list fxFlex>
+        <mat-list *ngFor="let item of source.valores">
             <mat-list-item>
-                <h4 mat-line>Despesas realizadas pelo {{source.unidade_nome}}</h4>
+                <h4 mat-line>Despesas realizadas pelo {{item.unidade_nome}}</h4>
             </mat-list-item>
         </mat-list>
     </mat-expansion-panel>
