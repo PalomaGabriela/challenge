@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { EditMonthDialogComponent } from './edit-month-dialog/index';
 
 @Component({
     selector: 'challenge-month',
@@ -16,11 +18,14 @@ export class MonthComponent implements OnInit {
 
     get months(): any[] { return this.list; }
 
-    constructor() { }
+    constructor(public dialog: MatDialog) { }
 
     ngOnInit() { }
 
-    edit(event: Event) {
+    openEdit(event: Event, month: any) {
         event.stopPropagation();
+        this.dialog.open(EditMonthDialogComponent, {data: month})
+            .afterClosed()
+            .subscribe(result => console.log('fechou'));
     }
 }
