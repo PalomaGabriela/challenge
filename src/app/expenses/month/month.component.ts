@@ -16,16 +16,20 @@ export class MonthComponent implements OnInit {
         this.list = months;
     }
 
-    get months(): any[] { return this.list; }
+    get months(): any[] { 
+        return this.list; 
+    }
 
     constructor(public dialog: MatDialog) { }
 
-    ngOnInit() { }
+    ngOnInit() { 
+
+    }
 
     openEdit(event: Event, month: any) {
         event.stopPropagation();
         this.dialog.open(EditMonthDialogComponent, {data: month})
             .afterClosed()
-            .subscribe(result => console.log(result));
+            .subscribe(result => result);
     }
 }
