@@ -5,6 +5,7 @@ import {
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
+import { MonthPipe } from './month.pipe'
 
 @NgModule({
     imports: [
@@ -16,7 +17,7 @@ import { CommonModule } from '@angular/common';
         MatListModule 
     ],
     exports: [MonthComponent],
-    declarations: [MonthComponent],
+    declarations: [MonthComponent, MonthPipe],
     providers: [],
 })
 export class MonthModule { }

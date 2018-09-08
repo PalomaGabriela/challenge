@@ -3,7 +3,7 @@
         <mat-expansion-panel-header>
             <mat-panel-title>
                 <mat-icon class="color-pink" mat-list-icon>description</mat-icon>
-                <span>Mês: {{month.mes}}</span>
+                <span>{{month.mes | monthPipe}}</span>
             </mat-panel-title>
             <button mat-icon-button class="color-pink" (click)="edit($event)">
                 <mat-icon aria-label="Example icon-button with a heart icon">create</mat-icon>
