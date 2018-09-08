@@ -19,4 +19,8 @@ export class MoneySourceComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { }
+
+    edit(event: Event) {
+        event.stopPropagation();
+    }
 }

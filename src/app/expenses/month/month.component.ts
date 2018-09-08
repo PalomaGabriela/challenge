@@ -19,4 +19,8 @@ export class MonthComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { }
+
+    edit(event: Event) {
+        event.stopPropagation();
+    }
 }
