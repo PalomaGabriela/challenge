@@ -22,7 +22,7 @@ export class ExpensesComponent implements OnInit {
         private readonly expenseService: ExpensesService
     ) {
         this.form = fb.group({
-            options: "all"
+            options: "month"
         });
     }
 

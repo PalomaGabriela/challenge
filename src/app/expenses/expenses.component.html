@@ -5,17 +5,15 @@
 
     <mat-toolbar-row fxLayout="row" [formGroup]="form">
         <mat-radio-group fxFlex formControlName="options">
-            <mat-radio-button checked="true" value="all">Tudo</mat-radio-button>
             <mat-radio-button value="month">Mês</mat-radio-button>
             <mat-radio-button value="category">Categoria</mat-radio-button>
             <mat-radio-button value="font">Fonte</mat-radio-button>
         </mat-radio-group>
     </mat-toolbar-row>
 </mat-toolbar>
-
 <div fxLayout="row">
-    <div fxFlex>
-        <challenge-month [months]="months"></challenge-month>
-        <challenge-categories [categories]="categories"></challenge-categories>
+    <div fxFlex [ngSwitch]="form.controls.options.value">
+        <challenge-month *ngSwitchCase="'month'" [months]="months"></challenge-month>
+        <challenge-categories *ngSwitchCase="'category'" [categories]="categories"></challenge-categories>
     </div>
 </div>
