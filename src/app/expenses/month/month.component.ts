@@ -11,10 +11,16 @@ import { Month } from '../shared/index';
 
 export class MonthComponent implements OnInit {
     list = [];
+    total = 0;
 
     @Input()
     set months(months: Month[]) {
         this.list = months;
+        if(!!this.list)  {
+            this.list.map(item => {
+                item.valores.map(value => this.total = this.total + parseFloat(value.valor_pago));
+            });
+        }
     }
 
     get months(): Month[] { 
@@ -24,7 +30,9 @@ export class MonthComponent implements OnInit {
     constructor(public dialog: MatDialog) { }
 
     ngOnInit() { 
-
+        // this.list.map(item => {
+        //     item.valores.map(value => this.total = this.total + parseFloat(value.valor_pago));
+        // });
     }
 
     openEdit(month: string, value: Month) {

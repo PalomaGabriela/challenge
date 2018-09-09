@@ -29,9 +29,7 @@ export class ExpensesComponent implements OnInit {
 
     ngOnInit() {
 
-        this.form.valueChanges.subscribe(
-            item => {console.log(item.options);}
-        );
+        this.form.valueChanges.subscribe(item => item);
 
         this.expenseService.list()
             .subscribe(res => {

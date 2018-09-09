@@ -11,6 +11,7 @@ import { Source } from '../shared/index';
 
 export class MoneySourceComponent implements OnInit {
     list = [];
+    total = 0;
 
     @Input()
     set sources(sources: Source[]) {
@@ -21,16 +22,25 @@ export class MoneySourceComponent implements OnInit {
     constructor(public dialog: MatDialog) { }
 
     ngOnInit() {
-
+        this.list.map(item => {
+            item.valores.map(value => this.total = this.total + parseFloat(value.valor_pago));
+        });
     }
 
-    openEdit(source:string , unit: Source) {
+    openEdit(source:string , unit: Source, index: number) {
         var obj = {
             source: source,
             unit: unit
         }
         this.dialog.open(EditMoneySourceDialogComponent, { data: obj, autoFocus: false })
             .afterClosed()
-            .subscribe(result => result);
+            .subscribe(result => {
+                this.list.map(item => {
+                    if(item.fonte_recurso === source) {
+                        item.valores[index] = result.unit ? result.unit : item.valores[index];
+                    }
+                })
+                unit = result
+            });
     }
 }

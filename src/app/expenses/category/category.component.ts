@@ -11,6 +11,7 @@ import { Category } from '../shared/index';
 
 export class CategoryComponent implements OnInit {
     list = [];
+    total = 0;
 
     @Input()
     set categories(categories: Category[]) {
@@ -21,7 +22,11 @@ export class CategoryComponent implements OnInit {
 
     constructor(public dialog: MatDialog) { }
 
-    ngOnInit() { }
+    ngOnInit() { 
+        this.list.map(item => {
+            item.valores.map(value => this.total = this.total + parseFloat(value.valor_pago));
+        });
+    }
 
     openEdit(category: string, value: Category) {
         var obj = {
