@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatDialogModule, MatDividerModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatDialogModule, MatDividerModule, MatFormFieldModule, MatIconModule, 
+    MatInputModule } from '@angular/material';
 import { EditCategoryDialogComponent } from './edit-category-dialog.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule }   from '@angular/forms';
@@ -12,6 +13,7 @@ import { FormsModule }   from '@angular/forms';
         MatDialogModule,
         MatDividerModule,
         MatFormFieldModule,
+        MatIconModule,
         MatInputModule
     ],
     exports: [],

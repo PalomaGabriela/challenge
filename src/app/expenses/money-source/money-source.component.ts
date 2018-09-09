@@ -29,7 +29,7 @@ export class MoneySourceComponent implements OnInit {
             source: source,
             unit: unit
         }
-        this.dialog.open(EditMoneySourceDialogComponent, { data: obj })
+        this.dialog.open(EditMoneySourceDialogComponent, { data: obj, autoFocus: false })
             .afterClosed()
             .subscribe(result => result);
     }

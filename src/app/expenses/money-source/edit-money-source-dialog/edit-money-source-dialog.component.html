@@ -1,11 +1,15 @@
 <div class="mat-dialog">
-    <h2 mat-dialog-title>Editar {{source}}</h2>
-
+    <div fxLayout="row">
+        <h2 fxFlex="92" mat-dialog-title>Editar {{source}}</h2>
+        <button fxFlex mat-icon-button (click)="close()">
+            <mat-icon>clear</mat-icon>
+        </button>
+    </div>
 
     <mat-dialog-content>
         <form #form="ngForm" class="form" fxLayout="column">
             <mat-form-field>
-                <input matInput placeholder="Unidade" [(ngModel)]="unit.unidade_nome" [ngModelOptions]="{standalone: true}">
+                <input matInput placeholder="Unidade" [(ngModel)]="unit.unidade_nome" [ngModelOptions]="{standalone: true}" autofocus>
             </mat-form-field>
         </form>
 

@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatDialogModule, MatDividerModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import {
+    MatButtonModule, MatDialogModule, MatDividerModule, MatFormFieldModule, MatInputModule,
+    MatIconModule
+} from '@angular/material';
 import { EditMonthDialogComponent } from './edit-month-dialog.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { SharedPipeModule } from '../../shared/index';
 
 @NgModule({
@@ -14,6 +17,7 @@ import { SharedPipeModule } from '../../shared/index';
         MatDividerModule,
         MatFormFieldModule,
         MatInputModule,
+        MatIconModule,
         SharedPipeModule
     ],
     exports: [],

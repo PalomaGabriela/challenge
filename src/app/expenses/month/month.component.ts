@@ -32,7 +32,7 @@ export class MonthComponent implements OnInit {
             month: month,
             value: value
         };
-        this.dialog.open(EditMonthDialogComponent, {data: obj})
+        this.dialog.open(EditMonthDialogComponent, {data: obj, autoFocus: false})
             .afterClosed()
             .subscribe(result => result);
     }

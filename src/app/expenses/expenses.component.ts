@@ -40,7 +40,7 @@ export class ExpensesComponent implements OnInit {
     }
 
     openGraphics() {
-        this.dialog.open(GraphicsDialogComponent, {data: this.expenses})
+        this.dialog.open(GraphicsDialogComponent, {data: this.expenses, autoFocus: false })
             .afterClosed()
             .subscribe(result => result);
     }

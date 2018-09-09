@@ -28,7 +28,7 @@ export class CategoryComponent implements OnInit {
             category: category,
             value: value
         }
-        this.dialog.open(EditCategoryDialogComponent, { data: obj })
+        this.dialog.open(EditCategoryDialogComponent, { data: obj, autoFocus: false })
             .afterClosed()
             .subscribe(result => category = result);
     }
