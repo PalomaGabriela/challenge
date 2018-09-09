@@ -31,12 +31,12 @@ export class MoneySourceGraphicComponent implements OnInit {
         const sources = this.listSources;
         let total = 0;
         sources.map(item => {
-            // debugger
             this.pieChartLabels.push(item.fonte_recurso);
-
-            let valores = item.valores.map(value => value.unidade_nome);
-            this.pieChartData.push(valores);
-            console.log(this.pieChartData)
+            let valores = item.valores.map(value => parseFloat(value.valor_pago));
+            valores.map(value => {
+                total = total + value
+            });
+            this.pieChartData.push(total);
         });
 
     }
