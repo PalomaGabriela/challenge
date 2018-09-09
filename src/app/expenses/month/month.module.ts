@@ -5,8 +5,8 @@ import {
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
-import { MonthPipe } from './month.pipe';
 import { EditMonthDialogModule } from './edit-month-dialog/index';
+import { SharedPipeModule } from '../shared-pipe.module';
 
 @NgModule({
     imports: [
@@ -16,10 +16,11 @@ import { EditMonthDialogModule } from './edit-month-dialog/index';
         MatButtonModule, 
         MatExpansionModule, 
         MatIconModule, 
-        MatListModule 
+        MatListModule,
+        SharedPipeModule
     ],
-    exports: [MonthComponent, MonthPipe],
-    declarations: [MonthComponent, MonthPipe],
+    exports: [MonthComponent],
+    declarations: [MonthComponent],
     providers: [],
 })
 export class MonthModule { }
