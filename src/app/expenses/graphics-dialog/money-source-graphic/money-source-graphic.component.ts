@@ -3,7 +3,8 @@ import { Source } from '../../shared/index';
 
 @Component({
     selector: 'challenge-money-source-graphic',
-    templateUrl: 'money-source-graphic.component.html'
+    templateUrl: 'money-source-graphic.component.html',
+    styleUrls: ['money-source-graphic.component.css']
 })
 
 export class MoneySourceGraphicComponent implements OnInit {

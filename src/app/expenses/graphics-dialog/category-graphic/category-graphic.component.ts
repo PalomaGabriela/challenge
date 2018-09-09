@@ -3,7 +3,8 @@ import { Category } from '../../shared/index';
 
 @Component({
     selector: 'challenge-category-graphic',
-    templateUrl: 'category-graphic.component.html'
+    templateUrl: 'category-graphic.component.html',
+    styleUrls: ['category-graphic.component.css']
 })
 
 export class CategoryGraphicComponent implements OnInit {

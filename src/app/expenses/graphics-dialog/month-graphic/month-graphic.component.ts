@@ -3,14 +3,15 @@ import { Month, MonthPipe} from '../../shared/index';
 
 @Component({
     selector: 'challenge-month-graphic',
-    templateUrl: 'month-graphic.component.html'
+    templateUrl: 'month-graphic.component.html',
+    styleUrls: ['month-graphic.component.css']
 })
 
 export class MonthGraphicComponent implements OnInit {
     public pieChartLabels: string[] = [];
     public pieChartData: number[] = [];
     public pieChartType: string = 'bar';
-    public pieChartLegend: boolean = true;
+    public pieChartLegend: boolean = false;
 
     listMonths = [];
 
