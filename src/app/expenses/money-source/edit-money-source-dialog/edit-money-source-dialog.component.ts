@@ -23,6 +23,10 @@ export class EditMoneySourceDialogComponent implements OnInit {
         this.dialogRef.close(this.data);
     }
 
+    isValidated() {
+        return !this.unit.unidade_nome;
+    }
+
     close() {
         this.dialogRef.close();
     }

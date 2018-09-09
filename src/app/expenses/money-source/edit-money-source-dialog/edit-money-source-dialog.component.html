@@ -17,6 +17,6 @@
 
     <mat-dialog-actions fxLayout="row" fxLayoutAlign="end end">
         <button class="mat-raised-button" (click)="close()">Fechar</button>
-        <button class="mat-raised-button mat-primary" (click)="save()">Salvar</button>
+        <button class="mat-raised-button mat-primary" [disabled]="isValidated()" (click)="save()">Salvar</button>
     </mat-dialog-actions>
 </div>
