@@ -25,6 +25,12 @@ export class EditCategoryDialogComponent implements OnInit {
         this.dialogRef.close(this.data);
     }
 
+    isValidated() {
+        
+        var validated = /^[\d,.?!]+$/.test(this.value.valor_pago.toString());
+        return validated;
+    }
+
     close() {
         this.dialogRef.close();
     }

@@ -11,18 +11,25 @@ import { Month } from '../../shared/index';
 export class EditMonthDialogComponent implements OnInit {
     value: Month;
     month: string;
-    constructor(public dialogRef: MatDialogRef<EditMonthDialogComponent>,
-        @Inject(MAT_DIALOG_DATA) public data) { 
-            this.value = Object.assign({}, data.value);
-            this.month = data.month;
-        }
 
-    ngOnInit() { 
+    constructor(public dialogRef: MatDialogRef<EditMonthDialogComponent>,
+        @Inject(MAT_DIALOG_DATA) public data) {
+        this.value = Object.assign({}, data.value);
+        this.month = data.month;
+    }
+
+    ngOnInit() {
     }
 
     save() {
         this.data.value = this.value;
         this.dialogRef.close(this.data);
+    }
+
+    isValidated() {
+        
+        var validated = /^[\d,.?!]+$/.test(this.value.valor_pago.toString());
+        return validated;
     }
 
     close() {
