@@ -76,19 +76,24 @@
                     "fonte_recurso": "EDUCA\u00c7\u00c3O - COMPL. LIMITE CONSTITUCIONAL",
                     "valores": [
                         {
-                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA"
+                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA",
+                            "valor_pago": "2855,30"
                         },
                         {
-                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA"
+                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA",
+                            "valor_pago": "2855,30"
                         },
                         {
-                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA"
+                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA",
+                            "valor_pago": "2855,30"
                         },
                         {
-                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA"
+                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA",
+                            "valor_pago": "2855,30"
                         },
                         {
-                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA"
+                            "unidade_nome": "SECRETARIA DE EDUCA\u00c7\u00c3O - ADMINISTRA\u00c7\u00c3O DIRETA",
+                            "valor_pago": "2855,30"
                         }
                     ]
                 },
@@ -96,25 +101,32 @@
                     "fonte_recurso": "RECURSOS ORDIN\u00c1RIOS - N\u00c3O VINCULADOS",
                     "valores": [
                         {
-                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA"
+                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA",
+                            "valor_pago": "2855,30"
                         },
                         {
-                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA"
+                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA",
+                            "valor_pago": "86559,28"
                         },
                         {
-                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA"
+                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA",
+                            "valor_pago": "86559,28"
                         },
                         {
-                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA"
+                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA",
+                            "valor_pago": "86559,28"
                         },
                         {
-                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA"
+                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA",
+                            "valor_pago": "86559,28"
                         },
                         {
-                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA"
+                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA",
+                            "valor_pago": "86559,28"
                         },
                         {
-                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA"
+                            "unidade_nome": "GABINETE DO PREFEITO - ADMINISTRA\u00c7\u00c3O DIRETA",
+                            "valor_pago": "86559,28"
                         }
                     ]
                 }
