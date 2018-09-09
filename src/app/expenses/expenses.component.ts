@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Expense } from './expenses';
 import { ExpensesService } from './expenses.service';
+import { GraphicsDialogDialogComponent } from './graphics-dialog/index';
+import { MatDialog } from '@angular/material';
 
 @Component({
     selector: 'challenge-expenses',
@@ -16,7 +18,8 @@ export class ExpensesComponent implements OnInit {
     
     constructor(
         fb: FormBuilder,
-        private readonly expenseService: ExpensesService
+        private readonly expenseService: ExpensesService,
+        public dialog: MatDialog
     ) {
         this.form = fb.group({
             options: "month"
@@ -37,6 +40,8 @@ export class ExpensesComponent implements OnInit {
     }
 
     openGraphics() {
-        console.log('open graphics');
+        this.dialog.open(GraphicsDialogDialogComponent, {data: this.expenses})
+            .afterClosed()
+            .subscribe(result => result);
     }
 }
