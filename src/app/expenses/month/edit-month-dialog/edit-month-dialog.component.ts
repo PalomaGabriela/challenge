@@ -28,7 +28,7 @@ export class EditMonthDialogComponent implements OnInit {
 
     isValidated() {
         
-        var validated = /^[\d,.?!]+$/.test(this.value.valor_pago.toString());
+        var validated = /^\d+(\,\d{1,2})?$/.test(this.value.valor_pago.toString());
         return validated;
     }
 
