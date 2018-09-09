@@ -6,7 +6,7 @@ import {
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
 import { EditMonthDialogModule } from './edit-month-dialog/index';
-import { SharedPipeModule } from '../shared-pipe.module';
+import { SharedPipeModule } from '../shared/index';
 
 @NgModule({
     imports: [

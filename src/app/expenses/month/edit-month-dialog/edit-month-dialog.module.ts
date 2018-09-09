@@ -3,7 +3,7 @@ import { MatButtonModule, MatDialogModule, MatDividerModule, MatFormFieldModule,
 import { EditMonthDialogComponent } from './edit-month-dialog.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule }   from '@angular/forms';
-import { SharedPipeModule } from '../../shared-pipe.module';
+import { SharedPipeModule } from '../../shared/index';
 
 @NgModule({
     imports: [

@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Month } from '../../index';
-import { MonthPipe } from '../../month.pipe';
+import { Month, MonthPipe} from '../../shared/index';
 
 @Component({
     selector: 'challenge-month-graphic',

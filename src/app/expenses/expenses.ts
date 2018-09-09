@@ -1,6 +1,4 @@
-import { Month } from "./month";
-import { Category } from "./category";
-import { Source } from "./source";
+import { Source, Category, Month } from "./shared/index";
 
 export interface Expense {
 

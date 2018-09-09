@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { EditCategoryDialogComponent } from './edit-category-dialog/index';
 import { MatDialog } from '@angular/material';
-import { Category } from '../index';
+import { Category } from '../shared/index';
 
 @Component({
     selector: 'challenge-categories',

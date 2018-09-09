@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Source } from '../../index';
+import { Source } from '../../shared/index';
 
 @Component({
     selector: 'challenge-money-source-graphic',

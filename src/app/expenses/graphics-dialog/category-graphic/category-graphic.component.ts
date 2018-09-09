@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Category } from '../../index';
+import { Category } from '../../shared/index';
 
 @Component({
     selector: 'challenge-category-graphic',

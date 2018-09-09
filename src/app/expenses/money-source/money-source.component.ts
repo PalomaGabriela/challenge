@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { EditMoneySourceDialogComponent } from './edit-money-source-dialog/index';
-import { Source } from '../index';
+import { Source } from '../shared/index';
 
 @Component({
     selector: 'challenge-source',

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { EditMonthDialogComponent } from './edit-month-dialog/index';
-import { Month } from '../index';
+import { Month } from '../shared/index';
 
 @Component({
     selector: 'challenge-month',
