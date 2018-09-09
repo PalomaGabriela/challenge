@@ -10,7 +10,7 @@
         <mat-list *ngFor="let item of month.valores">
             <mat-list-item>
                 <p mat-line>Valor Pago {{item.valor_pago}}</p>
-                <button mat-icon-button class="color-pink" (click)="openEdit($event, item)">
+                <button mat-icon-button class="color-pink" (click)="openEdit(month.month, item)">
                     <mat-icon aria-label="Example icon-button with a heart icon">create</mat-icon>
                 </button>
             </mat-list-item>

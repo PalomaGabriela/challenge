@@ -24,8 +24,12 @@ export class MoneySourceComponent implements OnInit {
 
     }
 
-    openEdit(source: Source) {
-        this.dialog.open(EditMoneySourceDialogComponent, { data: source })
+    openEdit(source:string , unit: Source) {
+        var obj = {
+            source: source,
+            unit: unit
+        }
+        this.dialog.open(EditMoneySourceDialogComponent, { data: obj })
             .afterClosed()
             .subscribe(result => result);
     }

@@ -9,16 +9,17 @@ import { Source } from '../../index';
 })
 
 export class EditMoneySourceDialogComponent implements OnInit {
-    month: Source;
+    unit: Source;
+    source: string;
     constructor(public dialogRef: MatDialogRef<EditMoneySourceDialogComponent>,
-        @Inject(MAT_DIALOG_DATA) public data: Source) { 
-            this.month = Object.assign({}, data);
+        @Inject(MAT_DIALOG_DATA) public data) { 
+            this.unit = Object.assign({}, data.unit);
+            this.source = data.source;
         }
 
     ngOnInit() { }
 
     save() {
-        this.data = this.month;
         this.dialogRef.close(this.data);
     }
 

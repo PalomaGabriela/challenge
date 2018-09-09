@@ -1,11 +1,11 @@
 <div class="mat-dialog">
-    <h2 mat-dialog-title>Editar informações de {{data.mes}}</h2>
+    <h2 mat-dialog-title>Editar informações de {{category}}</h2>
     <mat-divider></mat-divider>
 
     <mat-dialog-content>
         <form #form="ngForm" class="form" fxLayout="column">
             <mat-form-field>
-                <input matInput placeholder="Valor pago" [(ngModel)]="categoryModel.valor_pago" [ngModelOptions]="{standalone: true}">
+                <input matInput placeholder="Valor pago" [(ngModel)]="value.valor_pago" [ngModelOptions]="{standalone: true}">
             </mat-form-field>
         </form>
 

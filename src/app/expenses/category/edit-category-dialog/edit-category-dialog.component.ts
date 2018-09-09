@@ -10,16 +10,19 @@ import { Category } from '../../index';
 
 export class EditCategoryDialogComponent implements OnInit {
 
-    category: Category;
+    category: string;
+    value: Category;
+    
     constructor(public dialogRef: MatDialogRef<EditCategoryDialogComponent>,
-        @Inject(MAT_DIALOG_DATA) public data: Category) { 
-            this.category = data;
+        @Inject(MAT_DIALOG_DATA) public data) { 
+            this.category = data.category;
+            this.value = data.value;
         }
 
     ngOnInit() {  }
 
     save() {
-        this.dialogRef.close(this.category);
+        this.dialogRef.close(this.data);
     }
 
     close() {

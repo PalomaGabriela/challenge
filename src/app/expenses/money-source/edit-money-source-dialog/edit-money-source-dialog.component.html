@@ -1,11 +1,11 @@
 <div class="mat-dialog">
-    <h2 mat-dialog-title>Editar informações da fonte de recursos</h2>
+    <h2 mat-dialog-title>Editar informações de {{source}}</h2>
     <mat-divider></mat-divider>
 
     <mat-dialog-content>
         <form #form="ngForm" class="form" fxLayout="column">
             <mat-form-field>
-                <input matInput placeholder="Unidade" [(ngModel)]="month.unidade_nome" [ngModelOptions]="{standalone: true}">
+                <input matInput placeholder="Unidade" [(ngModel)]="unit.unidade_nome" [ngModelOptions]="{standalone: true}">
             </mat-form-field>
         </form>
 

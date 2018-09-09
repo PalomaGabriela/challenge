@@ -23,9 +23,12 @@ export class CategoryComponent implements OnInit {
 
     ngOnInit() { }
 
-    openEdit(category: Category) {
-        event.stopPropagation();
-        this.dialog.open(EditCategoryDialogComponent, { data: category })
+    openEdit(category: string, value: Category) {
+        var obj = {
+            category: category,
+            value: value
+        }
+        this.dialog.open(EditCategoryDialogComponent, { data: obj })
             .afterClosed()
             .subscribe(result => category = result);
     }

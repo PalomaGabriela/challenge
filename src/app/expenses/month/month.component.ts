@@ -27,9 +27,12 @@ export class MonthComponent implements OnInit {
 
     }
 
-    openEdit(event: Event, month: Month) {
-        event.stopPropagation();
-        this.dialog.open(EditMonthDialogComponent, {data: month})
+    openEdit(month: string, value: Month) {
+        var obj = {
+            month: month,
+            value: value
+        };
+        this.dialog.open(EditMonthDialogComponent, {data: obj})
             .afterClosed()
             .subscribe(result => result);
     }

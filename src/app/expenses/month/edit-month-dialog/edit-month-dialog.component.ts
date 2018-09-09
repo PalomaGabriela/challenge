@@ -9,16 +9,19 @@ import { Month } from '../../index';
 })
 
 export class EditMonthDialogComponent implements OnInit {
-    month: Month;
+    value: Month;
+    month: string;
     constructor(public dialogRef: MatDialogRef<EditMonthDialogComponent>,
-        @Inject(MAT_DIALOG_DATA) public data: Month) { 
-            this.month = Object.assign({}, data);
+        @Inject(MAT_DIALOG_DATA) public data) { 
+            this.value = Object.assign({}, data.value);
+            this.month = data.month;
         }
 
-    ngOnInit() { }
+    ngOnInit() { 
+    }
 
     save() {
-        this.data = this.month;
+        this.data.value = this.value;
         this.dialogRef.close(this.data);
     }
 
