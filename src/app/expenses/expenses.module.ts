@@ -10,12 +10,14 @@ import { HttpModule } from '@angular/http';
 import { MonthModule } from './month/index';
 import { CategoryModule } from './category/index';
 import { MoneySourceModule } from './money-source/index';
+import { GraphicsDialogModule } from './graphics-dialog/index'
 
 @NgModule({
     imports: [
         CategoryModule,
         CommonModule,
         FlexLayoutModule,
+        GraphicsDialogModule,
         HttpModule,
         MatButtonModule,
         MatExpansionModule,

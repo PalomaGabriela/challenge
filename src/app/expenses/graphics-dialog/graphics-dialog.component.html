@@ -1,0 +1,23 @@
+<div class="mat-dialog">
+    <div fxLayout="row">
+        <h2 mat-dialog-title>Gráficos</h2>
+        <button fxLayout="end end" mat-icon-button (click)="close()">
+            <mat-icon>clear</mat-icon>
+        </button>
+    </div>
+    <mat-divider></mat-divider>
+
+    <mat-dialog-content> 
+        <div fxLayout="row">
+            <challenge-category-graphic [category]="data.categories"></challenge-category-graphic>
+            <challenge-month-graphic [month]="data.months"></challenge-month-graphic>
+        </div>
+        <div fxLayout="row">
+            <!-- <challenge-money-source-graphic [source]="data.sources"></challenge-money-source-graphic> -->
+        </div>
+    </mat-dialog-content>
+
+    <mat-dialog-actions fxLayout="row" fxLayoutAlign="end end">
+        <button class="mat-raised-button" (click)="close()">Fechar</button>
+    </mat-dialog-actions>
+</div>

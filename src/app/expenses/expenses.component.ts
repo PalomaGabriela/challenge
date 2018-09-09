@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Expense } from './expenses';
 import { ExpensesService } from './expenses.service';
-import { GraphicsDialogDialogComponent } from './graphics-dialog/index';
+import { GraphicsDialogComponent } from './graphics-dialog/index';
 import { MatDialog } from '@angular/material';
 
 @Component({
@@ -40,7 +40,7 @@ export class ExpensesComponent implements OnInit {
     }
 
     openGraphics() {
-        this.dialog.open(GraphicsDialogDialogComponent, {data: this.expenses})
+        this.dialog.open(GraphicsDialogComponent, {data: this.expenses})
             .afterClosed()
             .subscribe(result => result);
     }
