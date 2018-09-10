@@ -20,6 +20,7 @@ export class EditMoneySourceDialogComponent implements OnInit {
     ngOnInit() { }
 
     save() {
+        this.data.unit = this.unit;
         this.dialogRef.close(this.data);
     }
 

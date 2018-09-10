@@ -4,13 +4,13 @@
             <mat-panel-title>
                 <mat-icon class="color-pink" mat-list-icon>calendar_view_day</mat-icon>
                 <span>{{month?.month | monthPipe}} - </span>
-                <span>Total de despesas: {{month.total}}</span>
+                <span>Total de despesas: R$ {{month.total}}</span>
             </mat-panel-title>
             
         </mat-expansion-panel-header>
         <mat-list *ngFor="let item of month.valores">
             <mat-list-item>
-                <p mat-line>Valor Pago {{item?.valor_pago}}</p>
+                <p mat-line>Valor Pago R$ {{item?.valor_pago}}</p>
                 <button mat-icon-button class="color-pink" (click)="openEdit(month.month, item)">
                     <mat-icon aria-label="Example icon-button with a heart icon">create</mat-icon>
                 </button>

@@ -11,15 +11,18 @@ import { Month } from '../shared/index';
 
 export class MonthComponent implements OnInit {
     list = [];
-    total = 0;
 
     @Input()
     set months(months: Month[]) {
         this.list = months;
         if(!!this.list)  {
             this.list.map(item => {
-                item.valores.map(value => this.total = this.total + parseFloat(value.valor_pago));
-                item.total = this.total;
+                let total = 0;
+                item.valores.map(value => {
+                    value.valor_pago = value.valor_pago.replace(',', '.');
+                    total = total + parseFloat(value.valor_pago)
+                });
+                item.total = total.toFixed(2);
             });
         }
     }
@@ -39,6 +42,6 @@ export class MonthComponent implements OnInit {
         };
         this.dialog.open(EditMonthDialogComponent, {data: obj, autoFocus: false})
             .afterClosed()
-            .subscribe(result => result);
+            .subscribe(result => value.valor_pago = result.value.valor_pago);
     }
 }

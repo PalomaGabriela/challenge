@@ -33,7 +33,10 @@ export class MoneySourceGraphicComponent implements OnInit {
         let total = 0;
         sources.map(item => {
             this.pieChartLabels.push(item.fonte_recurso);
-            let valores = item.valores.map(value => parseFloat(value.valor_empenhado));
+            let valores = item.valores.map(value => {
+                value.valor_pago = value.valor_pago.replace(',', '.');
+                return parseFloat(value.valor_pago);
+            });
             valores.map(value => {
                 total = total + value
             });

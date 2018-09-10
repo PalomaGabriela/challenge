@@ -35,9 +35,12 @@ export class MonthGraphicComponent implements OnInit {
             let monthPipe = new MonthPipe();
             this.pieChartLabels.push(monthPipe.transform(item.month));
 
-            let valores = item.valores.map(value => parseFloat(value.valor_pago));
+            let valores = item.valores.map(value => {
+                value.valor_pago = value.valor_pago.replace(',', '.');
+                return parseFloat(value.valor_pago);
+            });
             valores.map(value => {
-                total = total + value
+                total = total + value;
             });
             this.pieChartData.push(total);
         });

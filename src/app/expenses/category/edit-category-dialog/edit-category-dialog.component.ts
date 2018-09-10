@@ -16,12 +16,13 @@ export class EditCategoryDialogComponent implements OnInit {
     constructor(public dialogRef: MatDialogRef<EditCategoryDialogComponent>,
         @Inject(MAT_DIALOG_DATA) public data) { 
             this.category = data.category;
-            this.value = data.value;
+            this.value = Object.assign({}, data.value);
         }
 
     ngOnInit() {  }
 
     save() {
+        this.data.value = this.value;
         this.dialogRef.close(this.data);
     }
 

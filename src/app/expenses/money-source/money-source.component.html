@@ -4,13 +4,13 @@
             <mat-panel-title>
                 <mat-icon class="color-pink" mat-list-icon>description</mat-icon>
                 <span>{{source?.fonte_recurso}} - </span>
-                <span>Total de despesas: {{source.total}}</span>
+                <span>Total de despesas: R$ {{source.total}}</span>
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <mat-list *ngFor="let item of source.valores; let i = index">
+        <mat-list *ngFor="let item of source.valores">
             <mat-list-item>
                 <p mat-line>Despesas realizadas por {{item?.unidade_nome}}</p>
-                <button mat-icon-button class="color-pink" (click)="openEdit(source.fonte_recurso, item, i)">
+                <button mat-icon-button class="color-pink" (click)="openEdit(source.fonte_recurso, item)">
                     <mat-icon aria-label="Example icon-button with a heart icon">create</mat-icon>
                 </button>
             </mat-list-item>

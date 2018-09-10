@@ -11,7 +11,6 @@ import { Category } from '../shared/index';
 
 export class CategoryComponent implements OnInit {
     list = [];
-    total = 0;
 
     @Input()
     set categories(categories: Category[]) {
@@ -23,9 +22,13 @@ export class CategoryComponent implements OnInit {
     constructor(public dialog: MatDialog) { }
 
     ngOnInit() { 
+        let total = 0;
         this.list.map(item => {
-            item.valores.map(value => this.total = this.total + parseFloat(value.valor_pago));
-            item.total = this.total;
+            item.valores.map(value => {
+                value.valor_pago = value.valor_pago.replace(',', '.');
+                total = total + parseFloat(value.valor_pago)
+            });
+            item.total = total.toFixed(2);
         });
     }
 
@@ -36,6 +39,6 @@ export class CategoryComponent implements OnInit {
         }
         this.dialog.open(EditCategoryDialogComponent, { data: obj, autoFocus: false })
             .afterClosed()
-            .subscribe(result => category = result);
+            .subscribe(result => value.valor_pago = result.value.valor_pago);
     }
 }
