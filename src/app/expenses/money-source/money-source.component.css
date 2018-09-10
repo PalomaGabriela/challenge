@@ -14,3 +14,7 @@ mat-panel-title {
 .mat-expansion-panel {
     padding: 8px 0 8px 0;
 }
+
+.mat-list-item p {
+    font-size: 14px;
+}

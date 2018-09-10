@@ -3,8 +3,8 @@
         <mat-expansion-panel-header>
             <mat-panel-title>
                 <mat-icon class="color-pink" mat-list-icon>description</mat-icon>
-                <span>{{categoria?.category}}</span>
-                <span>Total de despesas: {{total}}</span>
+                <span>{{categoria?.category}} - </span>
+                <span>Total de despesas: {{categoria.total}}</span>
             </mat-panel-title>
         </mat-expansion-panel-header>
         <mat-list *ngFor="let item of categoria.valores">

@@ -19,6 +19,7 @@ export class MonthComponent implements OnInit {
         if(!!this.list)  {
             this.list.map(item => {
                 item.valores.map(value => this.total = this.total + parseFloat(value.valor_pago));
+                item.total = this.total;
             });
         }
     }

@@ -25,6 +25,7 @@ export class CategoryComponent implements OnInit {
     ngOnInit() { 
         this.list.map(item => {
             item.valores.map(value => this.total = this.total + parseFloat(value.valor_pago));
+            item.total = this.total;
         });
     }
 

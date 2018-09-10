@@ -8,11 +8,9 @@
 
 
 <mat-dialog-content>
-    <div fxLayout="row">
+    <div fxLayout="column">
         <challenge-category-graphic [category]="data.categories"></challenge-category-graphic>
         <challenge-month-graphic [month]="data.months"></challenge-month-graphic>
-    </div>
-    <div fxLayout="row">
         <challenge-money-source-graphic [source]="data.sources"></challenge-money-source-graphic>
     </div>
 </mat-dialog-content>
