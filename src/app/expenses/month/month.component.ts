@@ -29,11 +29,7 @@ export class MonthComponent implements OnInit {
 
     constructor(public dialog: MatDialog) { }
 
-    ngOnInit() { 
-        // this.list.map(item => {
-        //     item.valores.map(value => this.total = this.total + parseFloat(value.valor_pago));
-        // });
-    }
+    ngOnInit() { }
 
     openEdit(month: string, value: Month) {
         var obj = {

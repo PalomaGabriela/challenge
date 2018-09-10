@@ -32,13 +32,7 @@ export class ExpensesComponent implements OnInit {
 
 
     ngOnInit() {
-
-        this.form.valueChanges.subscribe(item => {
-           
-        });
-
         this.listByApi();
-
     }
 
     listByApi() {
