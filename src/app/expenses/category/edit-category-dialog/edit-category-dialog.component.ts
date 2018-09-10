@@ -28,7 +28,7 @@ export class EditCategoryDialogComponent implements OnInit {
 
     isValidated() {
         
-        var validated = /^\d+(\,\d{1,2})?$/.test(this.value.valor_pago.toString());
+        var validated = /^\d+(\.\d{1,2})?$/.test(this.value.valor_pago.toString());
         return validated;
     }
 

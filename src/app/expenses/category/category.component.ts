@@ -21,7 +21,11 @@ export class CategoryComponent implements OnInit {
 
     constructor(public dialog: MatDialog) { }
 
-    ngOnInit() { 
+    ngOnInit() {
+        this.calculateTotal();
+    }
+
+    calculateTotal() {
         let total = 0;
         this.list.map(item => {
             item.valores.map(value => {
@@ -39,6 +43,9 @@ export class CategoryComponent implements OnInit {
         }
         this.dialog.open(EditCategoryDialogComponent, { data: obj, autoFocus: false })
             .afterClosed()
-            .subscribe(result => value.valor_pago = result.value.valor_pago);
+            .subscribe(result => {
+                value.valor_pago = result.value.valor_pago;
+                this.calculateTotal();
+            });
     }
 }

@@ -10,7 +10,7 @@
     <mat-dialog-content>
         <form #form="ngForm" class="form" fxLayout="column">
             <mat-form-field>
-                <input matInput placeholder="Valor pago" pattern="\d+(\,\d{1,2})?" [(ngModel)]="value.valor_pago" [ngModelOptions]="{standalone: true}" autofocus>
+                <input matInput placeholder="Valor pago" pattern="\d+(\.\d{1,2})?" [(ngModel)]="value.valor_pago" [ngModelOptions]="{standalone: true}" autofocus>
             </mat-form-field>
         </form>
 

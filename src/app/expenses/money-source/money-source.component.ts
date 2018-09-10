@@ -31,13 +31,13 @@ export class MoneySourceComponent implements OnInit {
         });
     }
 
-    openEdit(source:string, unit: Source) {
+    openEdit(source: string, unit: Source) {
         var obj = {
             source: source,
             unit: unit
         }
         this.dialog.open(EditMoneySourceDialogComponent, { data: obj, autoFocus: false })
-        .afterClosed()
-        .subscribe(result => unit.unidade_nome = result.unit.unidade_nome);
+            .afterClosed()
+            .subscribe(result => unit.unidade_nome = result.unit.unidade_nome);
     }
 }

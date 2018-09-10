@@ -16,14 +16,7 @@ export class MonthComponent implements OnInit {
     set months(months: Month[]) {
         this.list = months;
         if(!!this.list)  {
-            this.list.map(item => {
-                let total = 0;
-                item.valores.map(value => {
-                    value.valor_pago = value.valor_pago.replace(',', '.');
-                    total = total + parseFloat(value.valor_pago)
-                });
-                item.total = total.toFixed(2);
-            });
+            this.calculateTotal();
         }
     }
 
@@ -35,6 +28,17 @@ export class MonthComponent implements OnInit {
 
     ngOnInit() { }
 
+    calculateTotal() {
+        this.list.map(item => {
+            let total = 0;
+            item.valores.map(value => {
+                value.valor_pago = value.valor_pago.replace(',', '.');
+                total = total + parseFloat(value.valor_pago)
+            });
+            item.total = total.toFixed(2);
+        });
+    }
+
     openEdit(month: string, value: Month) {
         var obj = {
             month: month,
@@ -42,6 +46,9 @@ export class MonthComponent implements OnInit {
         };
         this.dialog.open(EditMonthDialogComponent, {data: obj, autoFocus: false})
             .afterClosed()
-            .subscribe(result => value.valor_pago = result.value.valor_pago);
+            .subscribe(result => {
+                value.valor_pago = result.value.valor_pago
+                this.calculateTotal();
+            });
     }
 }
