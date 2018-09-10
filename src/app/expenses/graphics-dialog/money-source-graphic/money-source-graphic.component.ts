@@ -28,11 +28,12 @@ export class MoneySourceGraphicComponent implements OnInit {
     }
 
     ngOnInit() {
+        
         const sources = this.listSources;
         let total = 0;
         sources.map(item => {
             this.pieChartLabels.push(item.fonte_recurso);
-            let valores = item.valores.map(value => parseFloat(value.valor_pago));
+            let valores = item.valores.map(value => parseFloat(value.valor_empenhado));
             valores.map(value => {
                 total = total + value
             });

@@ -9,15 +9,10 @@ import { Category } from '../../shared/index';
 
 export class CategoryGraphicComponent implements OnInit {
     
-    public barChartOptions: any = {
-        scaleShowVerticalLines: false,
-        responsive: false
-    };
-    public barChartLabels: string[] = [];
-    public barChartType: string = 'bar';
-    public barChartLegend: boolean = true;
-
-    public barChartData: any[] = [];
+    public pieChartLabels: string[] = [];
+    public pieChartData: number[] = [];
+    public pieChartType: string = 'bar';
+    public pieChartLegend: boolean = false;
 
     listCategories = [];
 
@@ -36,21 +31,14 @@ export class CategoryGraphicComponent implements OnInit {
     ngOnInit() {
         const categories = this.listCategories;
         let total = 0;
-        const listTotal = [];
         categories.map(item => {
-            this.barChartLabels.push(item.category);
+            this.pieChartLabels.push(item.category);
 
             let valores = item.valores.map(value => parseFloat(value.valor_pago));
             valores.map(value => {
                 total = total + value
             });
-            listTotal.push(total);
-
-            this.barChartData.push({
-                data: listTotal,
-                label: 'valor pago'
-            });
-
+            this.pieChartData.push(total);
         });
 
     }

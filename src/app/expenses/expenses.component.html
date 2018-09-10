@@ -1,23 +1,28 @@
-<mat-toolbar class="toolbar-no-background">
-    <mat-toolbar-row fxLayout="row">
-        <h1 class="title">Despesas orçamentarias</h1>
-    </mat-toolbar-row>
+<mat-progress-bar *ngIf="months.length == 0" mode="indeterminate"></mat-progress-bar>
 
-    <mat-toolbar-row fxLayout="row" [formGroup]="form">
-        <mat-radio-group fxFlex formControlName="options">
-            <mat-radio-button value="month">Mês</mat-radio-button>
-            <mat-radio-button value="category">Categoria</mat-radio-button>
-            <mat-radio-button value="source">Fonte de recursos</mat-radio-button>
-        </mat-radio-group>
-        <button class="mat-raised-button mat-primary" fxLayout="row" fxLayoutAlign="end end" (click)="openGraphics()">
-            <span>Ver gráficos</span>
-        </button>
-    </mat-toolbar-row>
-</mat-toolbar>
-<div fxLayout="row">
-    <div fxFlex [ngSwitch]="form.controls.options.value">
-        <challenge-month *ngSwitchCase="'month'" [months]="expenses.months"></challenge-month>
-        <challenge-categories *ngSwitchCase="'category'" [categories]="expenses.categories"></challenge-categories>
-        <challenge-source *ngSwitchCase="'source'" [sources]="expenses.sources"></challenge-source>
+<div *ngIf="months.length > 0">
+
+    <mat-toolbar class="toolbar-no-background">
+        <mat-toolbar-row fxLayout="row">
+            <h1 class="title">Despesas orçamentarias</h1>
+        </mat-toolbar-row>
+        
+        <mat-toolbar-row fxLayout="row" [formGroup]="form">
+            <mat-radio-group fxFlex formControlName="options">
+                <mat-radio-button value="month">Mês</mat-radio-button>
+                <mat-radio-button value="category">Categoria</mat-radio-button>
+                <mat-radio-button value="source">Fonte de recursos</mat-radio-button>
+            </mat-radio-group>
+            <button class="mat-raised-button mat-primary" fxLayout="row" fxLayoutAlign="end end" (click)="openGraphics()">
+                <span>Ver gráficos</span>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <div fxLayout="row">
+        <div fxFlex [ngSwitch]="form.controls.options.value">
+            <challenge-month *ngSwitchCase="'month'" [months]="months"></challenge-month>
+            <challenge-categories *ngSwitchCase="'category'" [categories]="categories"></challenge-categories>
+            <challenge-source *ngSwitchCase="'source'" [sources]="sources"></challenge-source>
+        </div>
     </div>
 </div>

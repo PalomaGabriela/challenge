@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { ExpensesComponent } from './expenses.component';
 import {
-    MatButtonModule, MatExpansionModule, MatIconModule, MatListModule, MatRadioModule, MatToolbarModule
+    MatButtonModule, MatExpansionModule, MatIconModule, MatListModule, MatProgressBarModule,
+    MatRadioModule, MatToolbarModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -23,6 +24,7 @@ import { GraphicsDialogModule } from './graphics-dialog/index'
         MatExpansionModule,
         MatIconModule,
         MatListModule,
+        MatProgressBarModule,
         MatRadioModule,
         MatToolbarModule,
         MonthModule,

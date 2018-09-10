@@ -41,6 +41,6 @@ export class MonthGraphicComponent implements OnInit {
             });
             this.pieChartData.push(total);
         });
-
+        console.log(this.pieChartLabels)
     }
 }
