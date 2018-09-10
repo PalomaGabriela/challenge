@@ -44,8 +44,10 @@ export class CategoryComponent implements OnInit {
         this.dialog.open(EditCategoryDialogComponent, { data: obj, autoFocus: false })
             .afterClosed()
             .subscribe(result => {
-                value.valor_pago = result.value.valor_pago;
-                this.calculateTotal();
+                if (!!result) {
+                    value.valor_pago = result.value.valor_pago;
+                    this.calculateTotal();
+                }
             });
     }
 }

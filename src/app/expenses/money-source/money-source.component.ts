@@ -38,6 +38,10 @@ export class MoneySourceComponent implements OnInit {
         }
         this.dialog.open(EditMoneySourceDialogComponent, { data: obj, autoFocus: false })
             .afterClosed()
-            .subscribe(result => unit.unidade_nome = result.unit.unidade_nome);
+            .subscribe(result => {
+                if (!!result) {
+                    return unit.unidade_nome = result.unit.unidade_nome
+                }
+            });
     }
 }

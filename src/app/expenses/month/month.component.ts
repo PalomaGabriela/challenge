@@ -15,13 +15,13 @@ export class MonthComponent implements OnInit {
     @Input()
     set months(months: Month[]) {
         this.list = months;
-        if(!!this.list)  {
+        if (!!this.list) {
             this.calculateTotal();
         }
     }
 
-    get months(): Month[] { 
-        return this.list; 
+    get months(): Month[] {
+        return this.list;
     }
 
     constructor(public dialog: MatDialog) { }
@@ -44,11 +44,13 @@ export class MonthComponent implements OnInit {
             month: month,
             value: value
         };
-        this.dialog.open(EditMonthDialogComponent, {data: obj, autoFocus: false})
+        this.dialog.open(EditMonthDialogComponent, { data: obj, autoFocus: false })
             .afterClosed()
             .subscribe(result => {
-                value.valor_pago = result.value.valor_pago
-                this.calculateTotal();
+                if (!!result) {
+                    value.valor_pago = result.value.valor_pago
+                    this.calculateTotal();
+                }
             });
     }
 }
