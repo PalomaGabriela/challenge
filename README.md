@@ -21,14 +21,14 @@ ou baixando o arquivo zip: url…
 npm install
 ```
 
-
 ## Rode a aplicação
+```bash
 npm run start
+```
 - Abrir no navegador a url http://localhost:4200/
 
 ## Servidor
 - A aplicação aponta para um endpoint, sendo necessário a internet está conectada.
-
 ## Arquivos importantes
 src => app => expenses
 - Dentro desta pasta estão os arquivos que serão carregados com a funcionalidade do sistema.
