@@ -9,7 +9,7 @@ Total de despesas agrupadas por categorias
 De onde vem o dinheiro agrupado por fonte de recurso
 
 ## Aviso
-Verifique a versão do node que você tem caso precise atualizar ou instalar caso não tenha.
+Verifique a versão do node que você tem instalado, caso precise atualize e utilize a versão mais recente.
 
 ## Clone o projeto do repositório
 ```bash
