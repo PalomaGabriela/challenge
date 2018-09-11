@@ -37,13 +37,12 @@ npm install
 src => app => expenses
 - Dentro desta pasta estão os arquivos que serão carregados com a funcionalidade do sistema.
 - Essas pasta são carregadas no componente pai, ou seja, no expenses.
-#category 
-Essa pasta contém os arquivos de listagem e editar 
-#graphics-dialog
-Essa pasta contém os arquivos para exibir os gráficos
-#money-source
-Essa pasta contém os arquivos para listagem e editar
-#month
-Essa pasta contém os arquivos para listagem e editar
-#shared
-Essa pasta contém arquivos compartilhado no sistemgrua
+```bash
+.
+├── category            # Essa pasta contém os arquivos de listagem e editar
+├── graphics-dialog     # Essa pasta contém os arquivos para exibir os gráficos
+├── money-source        # Essa pasta contém os arquivos para listagem e editar
+├── month               # Essa pasta contém os arquivos para listagem e editar
+└── shared              # Essa pasta contém arquivos compartilhado no sistema
+```
+
