@@ -14,7 +14,7 @@ Verifique se você possui o node instalado, caso não, instale a versão mais at
 ## Obter arquivo
 Você pode obter o projeto através do clone do projeto no github: 
 git clone https://github.com/PalomaGabriela/challenge.git
-ou baixando o arquivo zip: url…
+ou baixando o arquivo zip: https://drive.google.com/open?id=1J6N2mMgV-ZaAEcVXLO11lm2co3WJDfxy
 
 ## Instalar as dependências do projeto
 ```bash
