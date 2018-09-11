@@ -9,12 +9,12 @@ Total de despesas agrupadas por categorias
 De onde vem o dinheiro agrupado por fonte de recurso
 
 ## Aviso
-Verifique se você possui o node instalado, caso não, instale a versão mais atual, caso tenha verifique qual versão está utilizando se precisar atualizar para mais atual.
+Verifique a versão do node que você tem caso precise atualizar ou instalar caso não tenha.
 
-## Obter arquivo
-Você pode obter o projeto através do clone do projeto no github: 
+## Clone o projeto do repositório
+```bash
 git clone https://github.com/PalomaGabriela/challenge.git
-ou baixando o arquivo zip: https://drive.google.com/open?id=1J6N2mMgV-ZaAEcVXLO11lm2co3WJDfxy
+```
 
 ## Instalar as dependências do projeto
 ```bash
@@ -28,11 +28,11 @@ npm run start
 - Abrir no navegador a url http://localhost:4200/
 
 ## Servidor
-- A aplicação aponta para um endpoint, sendo necessário a internet está conectada.
+- A aplicação aponta para um endpoint, sendo necessário a conexão com a internet.
 ## Arquivos importantes
 src => app => expenses
 - Dentro desta pasta estão os arquivos que serão carregados com a funcionalidade do sistema.
-- Essas pasta são carregadas no componente pai, ou seja, no expenses.
+- Essas pasta são carregadas no expenses.
 #category 
 Essa pasta contém os arquivos de listagem e editar 
 #graphics-dialog
